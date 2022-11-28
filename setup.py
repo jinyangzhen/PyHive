@@ -23,7 +23,7 @@ with open('README.rst') as readme:
     long_description = readme.read()
 
 setup(
-    name="PyHive",
+    name="pyhivecarmel",
     version=pyhive.__version__,
     description="Python interface to Hive",
     long_description=long_description,
@@ -68,6 +68,7 @@ setup(
             'hive = pyhive.sqlalchemy_hive:HiveDialect',
             "hive.http = pyhive.sqlalchemy_hive:HiveHTTPDialect",
             "hive.https = pyhive.sqlalchemy_hive:HiveHTTPSDialect",
+            "hive.kyuubi = pyhive.sqlalchemy_kyuubi: KyuubiDialect",
             'presto = pyhive.sqlalchemy_presto:PrestoDialect',
             'trino.pyhive = pyhive.sqlalchemy_trino:TrinoDialect',
         ],
